@@ -1,0 +1,21 @@
+version: 0.2
+
+phase:
+  install:
+    commands:
+      - sudo apt-get update
+      - sudo apt-get install apache2 -y
+  build:
+    commands:
+      - cp index.html /var/www/html/
+  post_build:
+    commands:
+      - echo zaid zaid
+
+
+artifacts:
+  files:
+    - '**/*'         
+
+
+  
